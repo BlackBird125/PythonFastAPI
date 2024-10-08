@@ -1,0 +1,14 @@
+{
+  "name": "FastAPI Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "fastapi",
+  "workspaceFolder": "/workspace/app",
+  "extensions": ["ms-python.python"],
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.autoComplete.extraPaths": ["/workspace/app"]
+  },
+  "forwardPorts": [8000],
+  "postCreateCommand": "pip install --no-cache-dir -r /workspace/requirements.txt",
+  "remoteUser": "root"
+}

@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI (Uvicorn)",
+      "type": "python",
+      "request": "launch",
+      "program": "/usr/local/bin/uvicorn", // Uvicornサーバーを起動
+      "args": [
+        "app.main:app", // FastAPIアプリケーションを指定
+        "--host",
+        "0.0.0.0", // サーバーをローカルホストで起動
+        "--port",
+        "8001",
+        "--reload"
+      ],
+      "console": "integratedTerminal", // VSCodeのターミナルを使用
+      "env": {
+        "DATABASE_URL": "mysql+mysqlconnector://user:password@db:3306/mydatabase" // 環境変数の設定（必要なら追加）
+      },
+      "jinja": true, // Jinjaテンプレートのデバッグを有効化
+      "justMyCode": true // 自分のコードだけをデバッグ
+    }
+  ]
+}

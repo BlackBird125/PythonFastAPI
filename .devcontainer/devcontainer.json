@@ -1,0 +1,10 @@
+{
+  "name": "FastAPI MySQL App",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "web",
+  "workspaceFolder": "/code",
+  "extensions": ["ms-python.python", "ms-python.vscode-pylance"],
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python"
+  }
+}
